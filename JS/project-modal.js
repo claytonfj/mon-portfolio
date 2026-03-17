@@ -19,6 +19,9 @@ function initProjectModal() {
         return;
     }
 
+    // Détecter le chemin de base vers le dossier IMAGES
+    const basePath = document.querySelector('script[src*="project-modal"]').src.replace(/JS\/project-modal\.js.*$/, '');
+
     // Données des projets
     const projectsData = {
         'projet1': {
@@ -26,7 +29,7 @@ function initProjectModal() {
             category: 'Développement Web',
             date: '2026',
             description: 'Création d\'un site vitrine moderne pour une entreprise de gestion des nuisibles avec galerie interactive, système de devis en ligne et animations CSS personnalisées.',
-            image: '../IMAGES/screenMaugesnuisibles.png',
+            image: basePath + 'IMAGES/screenMaugesnuisibles.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: 'https://mauges-nuisibles.fr/',
             showNotHostedMessage: false
@@ -36,7 +39,7 @@ function initProjectModal() {
             category: 'Développement Web',
             date: '2024',
             description: 'Refonte complète d\'un site web (avec l\'aide de <a href="https://www.media-dom.fr/" target="_blank" rel="noopener noreferrer" style="color: #2575fc; text-decoration: underline;">Mediadom</a>) pour une agence immobilière avec mise en place d\'un système de gestion de biens, recherche avancée et interface administrateur.',
-            image: '../IMAGES/ScreenObontaux.png',
+            image: basePath + 'IMAGES/ScreenObontaux.png',
             techStack: ['wordpress', 'php', 'css'],
             liveLink: 'https://www.obontaux.com/',
             showNotHostedMessage: false
@@ -46,7 +49,7 @@ function initProjectModal() {
             category: 'Développement Front-end',
             date: '2024',
             description: 'Création d\'un site vitrine moderne pour une entreprise de charpente avec galerie interactive, système de devis en ligne et animations CSS personnalisées.',
-            image: '../IMAGES/screennjf.png',
+            image: basePath + 'IMAGES/screennjf.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -56,7 +59,7 @@ function initProjectModal() {
             category: 'Développement Fullstack',
             date: '2025',
             description: 'Plateforme complète pour un food truck avec système de commande en ligne, suivi en temps réel et interface administrateur.',
-            image: '../IMAGES/screentruck.png',
+            image: basePath + 'IMAGES/screentruck.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -66,7 +69,7 @@ function initProjectModal() {
             category: 'Design & Développement',
             date: '2025',
             description: 'Concept store e-commerce avec animations 3D, réalité augmentée pour "essayer" les vêtements et système de paiement sécurisé.',
-            image: '../IMAGES/screenspaceboy.png',
+            image: basePath + 'IMAGES/screenspaceboy.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -76,7 +79,7 @@ function initProjectModal() {
             category: 'Application Web Mobile',
             date: '2025',
             description: 'Application web sur le thème du Puy du Fou permettant aux visiteurs de planifier leur journée au parc. Le système génère un itinéraire personnalisé en tenant compte de la vitesse de marche du visiteur et des durées des spectacles. Un espace d\'administration permet la gestion des spectacles et des utilisateurs.<br><br><em>Note : Ce projet n\'est pas totalement fonctionnel ni optimisé — nous avons manqué de temps en fin de PPE, certaines fonctionnalités sont incomplètes.</em>',
-            image: '../IMAGES/screenPUYDUFOU.png',
+            image: basePath + 'IMAGES/screenPUYDUFOU.png',
             techStack: ['php', 'sql', 'html', 'css', 'js'],
             liveLink: 'https://puydufou.ewenevin.fr',
             showNotHostedMessage: true
@@ -86,9 +89,9 @@ function initProjectModal() {
             category: 'Infrastructure Réseau',
             date: '2024',
             description: 'Projet d\'infrastructure réseau complet pour l\'entreprise fictive MedocLab, incluant la mise en place d\'un serveur Windows Server 2019 avec Active Directory, la gestion des utilisateurs, des stratégies de groupe (GPO), et la configuration des services réseau essentiels (DNS, DHCP, partages réseau, scripts PowerShell).',
-            image: '../IMAGES/screenMEDOCLAB.png',
+            image: basePath + 'IMAGES/screenMEDOCLAB.png',
             techStack: [],
-            liveLink: '../IMAGES/Document technique AP1.1 Réseaux Clayton.pdf',
+            liveLink: basePath + 'IMAGES/Document technique AP1.1 Réseaux Clayton.pdf',
             showNotHostedMessage: false,
             buttonText: 'Voir la documentation',
             buttonIcon: 'fas fa-file-alt'
@@ -98,7 +101,7 @@ function initProjectModal() {
             category: 'Application Web',
             date: '2024',
             description: 'Outil de gestion pour les centres de tri avec tableau de bord analytique, suivi des flux de déchets et génération de rapports.',
-            image: '../IMAGES/screendechets.png',
+            image: basePath + 'IMAGES/screendechets.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -108,7 +111,7 @@ function initProjectModal() {
             category: 'Développement Fullstack',
             date: '2025',
             description: 'Marketplace mettant en relation chefs à domicile et clients avec système de réservation, paiement en ligne et évaluations.',
-            image: '../IMAGES/screenburger.png',
+            image: basePath + 'IMAGES/screenburger.png',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -117,12 +120,12 @@ function initProjectModal() {
 
     // Icônes des technologies
     const techIcons = {
-        'html': { icon: '../IMAGES/HTML.png', name: 'HTML5' },
-        'css': { icon: '../IMAGES/CSS.png', name: 'CSS3' },
-        'js': { icon: '../IMAGES/JS.png', name: 'JavaScript' },
-        'php': { icon: '../IMAGES/PHP.png', name: 'PHP' },
-        'sql': { icon: '../IMAGES/SQL.png', name: 'SQL' },
-        'wordpress': { icon: '../IMAGES/Wordpress.png', name: 'WordPress' }
+        'html': { icon: basePath + 'IMAGES/HTML.png', name: 'HTML5' },
+        'css': { icon: basePath + 'IMAGES/CSS.png', name: 'CSS3' },
+        'js': { icon: basePath + 'IMAGES/JS.png', name: 'JavaScript' },
+        'php': { icon: basePath + 'IMAGES/PHP.png', name: 'PHP' },
+        'sql': { icon: basePath + 'IMAGES/SQL.png', name: 'SQL' },
+        'wordpress': { icon: basePath + 'IMAGES/Wordpress.png', name: 'WordPress' }
     };
 
     let scrollPosition = 0;
