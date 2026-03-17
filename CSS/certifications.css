@@ -1,0 +1,236 @@
+/* certifications.css */
+.certifications {
+    padding: 100px 0;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 60px 0 80px;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    height: 550px; /* Change 500px → 550px */
+}
+
+/* Ligne 33 - Augmente la hauteur de la slide */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 560px; /* Change 510px → 560px (+50px) */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(0.9);
+    opacity: 1 !important;
+    filter: brightness(1) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-slide-active {
+    transform: scale(1.05);
+    opacity: 1 !important;
+    filter: brightness(1.05) !important;
+    box-shadow: 0 25px 50px rgba(106, 17, 203, 0.3);
+    z-index: 10;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.95);
+    opacity: 1 !important;
+    filter: brightness(0.95) !important;
+    z-index: 5;
+}
+
+.certification-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, 
+        rgba(45, 45, 65, 0.98) 0%, 
+        rgba(30, 30, 45, 0.98) 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(106, 17, 203, 0.4);
+    position: relative;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.swiper-slide-active .certification-card {
+    border: 2px solid rgba(106, 17, 203, 0.6);
+    box-shadow: 
+        inset 0 0 30px rgba(106, 17, 203, 0.1),
+        0 30px 60px rgba(106, 17, 203, 0.2);
+}
+
+.certification-header {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+}
+
+.certification-detail {
+    padding: 30px 25px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.certification-detail h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--lighter-color);
+    text-align: center;
+}
+
+.certification-detail > span {
+    display: block;
+    font-size: 16px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.certification-detail p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    flex: 1;
+}
+
+.certification-meta {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.certification-meta span {
+    padding: 8px 16px;
+    background: rgba(106, 17, 203, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(106, 17, 203, 0.4);
+}
+
+.btn-certification {
+    display: block;
+    padding: 12px 25px;
+    background: rgba(106, 17, 203, 0.25);
+    color: var(--lighter-color);
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid rgba(106, 17, 203, 0.4);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    margin-top: auto;
+}
+
+.btn-certification:hover {
+    background: rgba(106, 17, 203, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 40px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    border: 1px solid rgba(106, 17, 203, 0.4);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--gradient-primary);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+.swiper-scrollbar {
+    position: relative !important;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    height: 6px;
+}
+
+.swiper-scrollbar-drag {
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+    opacity: 0 !important;
+    display: none !important;
+}
+
+.swiper-slide * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.swiper-slide-prev .certification-card,
+.swiper-slide-next .certification-card,
+.swiper-slide-duplicate-prev .certification-card,
+.swiper-slide-duplicate-next .certification-card,
+.swiper-slide-duplicate-active .certification-card {
+    opacity: 1 !important;
+    filter: brightness(1) !important;
+}
+
+.swiper-slide {
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes activeGlow {
+    0% {
+        box-shadow: 0 25px 50px rgba(106, 17, 203, 0.3);
+    }
+    50% {
+        box-shadow: 0 30px 60px rgba(106, 17, 203, 0.4);
+    }
+    100% {
+        box-shadow: 0 25px 50px rgba(106, 17, 203, 0.3);
+    }
+}
+
+.swiper-slide-active .certification-card {
+    animation: activeGlow 3s infinite alternate;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+

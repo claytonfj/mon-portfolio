@@ -1,0 +1,363 @@
+/* timeline.css — Aceternity-style animated timeline */
+
+.timeline-section {
+    padding: 100px 0 0;
+    position: relative;
+}
+
+/* ── Container principal ── */
+.aceternity-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+/* ── Entrée (une année) ── */
+.at-entry {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .at-entry {
+        padding-top: 100px;
+    }
+}
+
+/* ── Colonne gauche : dot + année (sticky) ── */
+.at-left {
+    position: sticky;
+    top: 160px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 40;
+    max-width: 240px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.at-dot-wrap {
+    position: absolute;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--darker-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.at-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(106, 17, 203, 0.4);
+    transition: all 0.4s ease;
+}
+
+/* Dot actif quand l'entrée est visible */
+.at-entry.at-active .at-dot {
+    background: var(--primary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(106, 17, 203, 0.5), 0 0 40px rgba(37, 117, 252, 0.2);
+}
+
+.at-year {
+    display: none;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.35;
+    padding-left: 60px;
+    margin-bottom: 0;
+    transition: opacity 0.4s ease;
+}
+
+@media (min-width: 768px) {
+    .at-year {
+        display: block;
+    }
+}
+
+.at-entry.at-active .at-year {
+    opacity: 1;
+}
+
+/* Année version mobile */
+.at-year-mobile {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .at-year-mobile {
+        display: none;
+    }
+}
+
+/* ── Colonne droite : contenu ── */
+.at-right {
+    position: relative;
+    padding-left: 60px;
+    padding-right: 16px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .at-right {
+        padding-left: 16px;
+    }
+}
+
+/* ── Cartes ── */
+.at-card {
+    padding: 24px 28px;
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 16px;
+    transition: all 0.35s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.at-entry.at-visible .at-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Décalage pour chaque carte enfant */
+.at-card:nth-child(2) { transition-delay: 0.05s; }
+.at-card:nth-child(3) { transition-delay: 0.1s; }
+.at-card:nth-child(4) { transition-delay: 0.15s; }
+.at-card:nth-child(5) { transition-delay: 0.2s; }
+.at-card:nth-child(6) { transition-delay: 0.25s; }
+
+.at-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(106, 17, 203, 0.3);
+    box-shadow: 0 12px 40px rgba(106, 17, 203, 0.12), 0 0 0 1px rgba(106, 17, 203, 0.1);
+}
+
+.at-card h4 {
+    font-family: var(--font-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--lighter-color);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.at-card p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.at-school {
+    font-size: 0.8rem !important;
+    font-weight: 600;
+    color: rgba(37, 117, 252, 0.8) !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 0.3px;
+}
+
+/* ── Badges ── */
+.at-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.at-badge i {
+    font-size: 0.65rem;
+}
+
+.at-badge--stage {
+    background: rgba(106, 17, 203, 0.15);
+    color: #b57cff;
+    border: 1px solid rgba(106, 17, 203, 0.25);
+}
+
+.at-badge--education {
+    background: rgba(37, 117, 252, 0.15);
+    color: #6db3ff;
+    border: 1px solid rgba(37, 117, 252, 0.25);
+}
+
+.at-badge--job {
+    background: rgba(0, 212, 170, 0.12);
+    color: #00d4aa;
+    border: 1px solid rgba(0, 212, 170, 0.25);
+}
+
+/* ── Ligne animée (track + progress) ── */
+.at-line-track {
+    position: absolute;
+    left: 22px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255, 255, 255, 0.06) 5%,
+        rgba(255, 255, 255, 0.06) 95%,
+        transparent 100%
+    );
+    /* Masque dégradé */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.at-line-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+    background: linear-gradient(
+        to top,
+        var(--secondary-color),
+        var(--primary-color),
+        transparent
+    );
+    border-radius: 2px;
+    transition: none; /* sera animé via JS */
+}
+
+/* ── Mobile : cacher la colonne gauche, décaler la ligne ── */
+@media (max-width: 767px) {
+    .timeline-section {
+        padding: 80px 0 0;
+    }
+
+    .at-left {
+        max-width: 0;
+        width: 0;
+        overflow: hidden;
+        padding: 0;
+        gap: 0;
+    }
+
+    .at-entry {
+        gap: 0;
+        padding-top: 30px;
+    }
+
+    .at-dot-wrap {
+        left: 2px;
+    }
+
+    .at-line-track {
+        left: 12px;
+    }
+
+    .at-right {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    /* Override le text-align: center de responsive.css pour la timeline */
+    .at-card,
+    .at-card h4,
+    .at-card p,
+    .at-card .at-school,
+    .at-card .at-badge,
+    .at-year-mobile {
+        text-align: left !important;
+    }
+
+    .at-card {
+        padding: 20px;
+    }
+
+    .at-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .at-card p {
+        font-size: 0.82rem;
+    }
+
+    .at-badge {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+}
+
+/* ── Petits écrans ── */
+@media (max-width: 480px) {
+    .at-right {
+        padding-left: 35px;
+    }
+
+    .at-card {
+        padding: 16px;
+    }
+
+    .at-year-mobile {
+        font-size: 1.3rem;
+    }
+
+    .at-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .at-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .at-right {
+        padding-left: 30px;
+    }
+
+    .at-dot-wrap {
+        width: 30px;
+        height: 30px;
+    }
+
+    .at-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .at-card {
+        padding: 14px;
+        margin-bottom: 12px;
+    }
+}

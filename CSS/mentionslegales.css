@@ -1,0 +1,240 @@
+/* mentionslegales.css */
+
+/* Hero */
+.legal-hero {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.legal-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.legal-hero-content {
+    text-align: center;
+    width: 100%;
+    padding-top: 20vh;
+}
+
+.legal-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.legal-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+/* Conteneur principal */
+.legal-container {
+    position: relative;
+    background-color: var(--darker-color);
+    padding: 50px 0 100px;
+    margin-top: -50px;
+    z-index: 2;
+}
+
+/* Intro */
+.legal-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* Sections */
+.legal-section {
+    background: rgba(15, 15, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    transition: all 0.5s ease;
+    border-left: 4px solid var(--primary-color);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.legal-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.legal-section:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-hover);
+}
+
+.section-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.legal-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.legal-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+}
+
+.legal-content p,
+.legal-content ul {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.legal-content ul {
+    padding-left: 20px;
+}
+
+.legal-content li {
+    margin-bottom: 10px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.legal-content li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.legal-content a {
+    color: var(--secondary-color);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.legal-footer {
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.legal-footer a {
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parallax subtil desktop */
+@media (min-width: 768px) {
+    .legal-hero-bg {
+        transition: transform 0.1s linear;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .legal-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-hero {
+        height: 40vh;
+    }
+
+    .legal-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .legal-hero p {
+        font-size: 1rem;
+    }
+
+    .legal-container {
+        margin-top: -30px;
+    }
+
+    .legal-section {
+        padding: 25px 20px;
+    }
+
+    .section-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .legal-hero h1 {
+        font-size: 2rem;
+    }
+
+    .legal-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .legal-intro {
+        font-size: 0.85rem;
+    }
+}

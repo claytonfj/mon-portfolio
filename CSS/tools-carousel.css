@@ -1,0 +1,205 @@
+/* tools-carousel.css */
+.tools-carousel-container {
+    width: 100%;
+    overflow: clip visible;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.tools-carousel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    margin-top: 60px;
+}
+
+.tool-item {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+    position: relative;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 15px;
+}
+
+.tool-item:hover {
+    background: rgba(106, 17, 203, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+}
+
+.tool-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--darker-color);
+    color: var(--lighter-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.tool-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -35px;
+}
+
+.tool-item img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Dégradé de fondu sur les bords */
+.tools-carousel-container::before,
+.tools-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Dégradé gauche */
+.tools-carousel-container::before {
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        var(--dark-color) 0%,
+        rgba(15, 15, 26, 0.9) 20%,
+        rgba(15, 15, 26, 0.7) 40%,
+        rgba(15, 15, 26, 0.4) 60%,
+        rgba(15, 15, 26, 0.1) 80%,
+        transparent 100%
+    );
+}
+
+/* Dégradé droit */
+.tools-carousel-container::after {
+    right: 0;
+    background: linear-gradient(
+        270deg,
+        var(--dark-color) 0%,
+        rgba(15, 15, 26, 0.9) 20%,
+        rgba(15, 15, 26, 0.7) 40%,
+        rgba(15, 15, 26, 0.4) 60%,
+        rgba(15, 15, 26, 0.1) 80%,
+        transparent 100%
+    );
+}
+
+/* Responsive pour les fadés */
+@media (max-width: 992px) {
+    .tools-carousel-container::before,
+    .tools-carousel-container::after {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-carousel-container::before,
+    .tools-carousel-container::after {
+        width: 80px;
+        background: linear-gradient(
+            90deg,
+            var(--dark-color) 0%,
+            rgba(15, 15, 26, 0.8) 30%,
+            transparent 100%
+        );
+    }
+    
+    .tools-carousel-container::after {
+        background: linear-gradient(
+            270deg,
+            var(--dark-color) 0%,
+            rgba(15, 15, 26, 0.8) 30%,
+            transparent 100%
+        );
+    }
+}
+
+@media (max-width: 576px) {
+    .tools-carousel-container::before,
+    .tools-carousel-container::after {
+        width: 60px;
+        background: linear-gradient(
+            90deg,
+            var(--dark-color) 0%,
+            rgba(15, 15, 26, 0.6) 50%,
+            transparent 100%
+        );
+    }
+    
+    .tools-carousel-container::after {
+        background: linear-gradient(
+            270deg,
+            var(--dark-color) 0%,
+            rgba(15, 15, 26, 0.6) 50%,
+            transparent 100%
+        );
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-carousel-container::before,
+    .tools-carousel-container::after {
+        width: 40px;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 375px) {
+    .tools-carousel-container::before,
+    .tools-carousel-container::after {
+        width: 30px;
+        background: linear-gradient(
+            90deg,
+            var(--dark-color) 0%,
+            transparent 50%
+        );
+    }
+    
+    .tools-carousel-container::after {
+        background: linear-gradient(
+            270deg,
+            var(--dark-color) 0%,
+            transparent 50%
+        );
+    }
+}

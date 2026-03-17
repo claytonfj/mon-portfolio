@@ -1,0 +1,73 @@
+/* about.css */
+.about-image {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    max-width: 400px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.detail-item span {
+    font-weight: 600;
+    color: var(--gray-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    font-weight: 500;
+}
+
+.about-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+}

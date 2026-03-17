@@ -1,0 +1,222 @@
+/* navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 15, 26, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+}
+
+.navbar.scrolled {
+    background-color: rgba(15, 15, 26, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute ;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background: var(--lighter-color);
+    border-radius: 5px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: var(--lighter-color);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-8px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(15, 15, 26, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.mobile-menu__content a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.mobile-menu__content a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition);
+}
+
+.mobile-menu__content a:hover::after,
+.mobile-menu__content a.active::after {
+    width: 100%;
+}
+
+.mobile-menu .social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.mobile-menu .social-links a {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.mobile-menu .social-links a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-3px);
+}
+
+/* navbar.css - Ajoutez ceci après vos styles existants */
+
+.logo img {
+    height: 100px; /* Taille que vous voulez */
+    width: auto; /* Maintient les proportions */
+    transition: var(--transition);
+}
+
+/* Optionnel : effet au survol */
+.logo img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Ajustement pour mobile si nécessaire */
+@media (max-width: 768px) {
+    .logo img {
+        height: 80px; /* Taille légèrement réduite sur mobile */
+    }
+}
+
+/* Centre verticalement le menu-btn et le logo sur mobile */
+@media (max-width: 768px) {
+    .navbar .container {
+        height: 100px; /* Ajuste selon la hauteur de ton logo */
+        align-items: center;
+    }
+    
+    .menu-btn {
+        display: flex; /* Change de block à flex */
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Prend toute la hauteur disponible */
+    }
+    
+    /* Positionne la barre du burger au centre */
+    .menu-btn__burger {
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    /* Assure que le logo soit aussi centré verticalement */
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    /* Ajuste la hauteur de la navbar si besoin */
+    .navbar {
+        min-height: 100px; /* Doit correspondre à la hauteur du container */
+    }
+}
