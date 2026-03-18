@@ -1,7 +1,7 @@
 // main.js - Fichier principal qui initialise toutes les fonctionnalités
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialiser toutes les fonctionnalités
+    // Core
     initPreloader();
     initCustomCursor();
     initNavbarScroll();
@@ -9,37 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
     initActiveNav();
     initSmoothScrolling();
     initScrollAnimations();
-    initContactForm();
     initHeroTextAnimation();
-    initScrollReveal();
     initToolsCarousel();
-    initLoadMoreProjects();
     initScrollDown();
-    
-    // Initialiser la modal des projets
-    if (typeof initProjectModal === 'function') {
-        initProjectModal();
-    }
 
-    // Initialiser le bouton "Voir plus de projets"
-    if (typeof initLoadMoreProjects === 'function') {
-        initLoadMoreProjects();
-    }
-    
-    // Initialiser le carrousel des certifications
-    if (typeof initCertificationsCarousel === 'function') {
-        initCertificationsCarousel();
-    }
+    // Contact form
+    if (typeof initContactForm === 'function') initContactForm();
 
-    // Initialiser la timeline Aceternity
-    if (typeof initTimelineScroll === 'function') {
-        initTimelineScroll();
-    }
+    // ScrollReveal (loaded externally)
+    if (typeof initScrollReveal === 'function') initScrollReveal();
 
-    // Initialiser la veille informatique
-    if (typeof initVeille === 'function') {
-        initVeille();
-    }
-
-    console.log('Toutes les fonctionnalités sont initialisées !');
+    // Conditional inits
+    if (typeof initProjectModal === 'function') initProjectModal();
+    if (typeof initLoadMoreProjects === 'function') initLoadMoreProjects();
+    if (typeof initCertificationsCarousel === 'function') initCertificationsCarousel();
+    if (typeof initTimelineScroll === 'function') initTimelineScroll();
+    if (typeof initVeille === 'function') initVeille();
+    if (typeof initGallery === 'function') initGallery();
 });

@@ -1,10 +1,23 @@
 /* hero.css */
 .hero {
+    position: relative;
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
     overflow: hidden;
+}
+
+/* Vidéo de fond */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
 }
 
 .hero .container {
@@ -15,8 +28,11 @@
 }
 
 .hero-content {
+    position: relative;
     max-width: 600px;
-    z-index: 2;
+    padding: 20px;
+    color: white;
+    z-index: 1;
 }
 
 .subtitle {
@@ -39,17 +55,9 @@
     animation: fadeInUp 0.5s forwards;
 }
 
-.title-word-1 {
-    animation-delay: 0.1s;
-}
-
-.title-word-2 {
-    animation-delay: 0.3s;
-}
-
-.title-word-3 {
-    animation-delay: 0.5s;
-}
+.title-word-1 { animation-delay: 0.1s; }
+.title-word-2 { animation-delay: 0.3s; }
+.title-word-3 { animation-delay: 0.5s; }
 
 .description {
     font-size: 1.1rem;
@@ -126,35 +134,4 @@
     left: 50%;
     transform: translateX(-50%);
     animation: scrollAnimation 2s infinite;
-}
-
-/* Structure principale */
-.hero {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-/* Vidéo de fond */
-.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.6);
-}
-
-/* Contenu aligné à gauche */
-.hero-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 600px;
-    padding: 20px;
-    color: white;
-    z-index: 1;
 }

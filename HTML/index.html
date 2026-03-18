@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Clayton Foin-Jolivet — Développeur web passionné par la création digitale.">
+    <meta name="theme-color" content="#0f0f1a">
     <title>Clayton FOIN-JOLIVET | Portfolio</title>
+
+    <!-- Preconnect for faster external resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,8 +59,8 @@
             <a href="#home" class="logo">
                 <img src="../IMAGES/logo.png" alt="Mon Logo">
             </a>
-            
-            <div class="navbar-links">
+
+            <div class="navbar-capsule">
                 <a href="#home" class="active">Accueil</a>
                 <a href="#about">À propos</a>
                 <a href="#skills">Compétences</a>
@@ -62,7 +70,6 @@
                 <a href="#veille">Veille</a>
                 <a href="#contact">Contact</a>
             </div>
-
             <div class="menu-btn">
                 <div class="menu-btn__burger"></div>
             </div>
@@ -90,7 +97,7 @@
 
        <!-- Hero Section -->
     <section id="home" class="hero">
-        <video class="video-bg" autoplay muted loop playsinline>
+        <video class="video-bg" autoplay muted loop playsinline preload="metadata">
             <source src="../VIDEOS/VideoIA.mp4" type="video/mp4">
         </video>
         
@@ -132,7 +139,7 @@
                     <div class="image-container">
                         <picture>
                             <source media="(max-width: 768px)" srcset="../IMAGES/Macbookcode2.png">
-                            <img src="../IMAGES/Macbookcode.png" alt="À propos">
+                            <img src="../IMAGES/Macbookcode.png" alt="À propos" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -330,7 +337,7 @@
             <!-- Project 1 (VISIBLE) -->
             <div class="project-item" data-category="web">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets1.png" alt="Projet 1">
+                    <img src="../IMAGES/mockupprojets1.png" alt="Projet 1" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de gestion des nuisibles</h3>
                         <p>Création d'un site complet via VSCode</p>
@@ -342,7 +349,7 @@
             <!-- Project 2 (VISIBLE) -->
             <div class="project-item" data-category="web">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets2.png" alt="Projet 1">
+                    <img src="../IMAGES/mockupprojets2.png" alt="Projet 2" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de courtiers immobiliers</h3>
                         <p>Refonte d'un site complet via Wordpress</p>
@@ -354,7 +361,7 @@
             <!-- Project 3 (VISIBLE) -->
             <div class="project-item" data-category="app">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets3.png" alt="Projet 2">
+                    <img src="../IMAGES/mockupprojets3.png" alt="Projet 3" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site d'artisans en charpente</h3>
                         <p>Refonte d'un site complet via VSCode</p>
@@ -366,7 +373,7 @@
             <!-- Project 4 (VISIBLE) -->
             <div class="project-item" data-category="design">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets4.png" alt="Projet 3">
+                    <img src="../IMAGES/mockupprojets4.png" alt="Projet 4" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de food truck de pizzas</h3>
                         <p>Création d'un site complet via VSCode</p>
@@ -378,7 +385,7 @@
             <!-- Project 5 (VISIBLE) -->
             <div class="project-item" data-category="web">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets5.png" alt="Projet 4">
+                    <img src="../IMAGES/mockupprojets5.png" alt="Projet 5" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de vêtements futuristes</h3>
                         <p>Création d'un site "prototype" via VSCode</p>
@@ -390,7 +397,7 @@
             <!-- Project 6 - Puy du Fou (VISIBLE) -->
             <div class="project-item" data-category="app">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupPDF.png" alt="Puy du Fou">
+                    <img src="../IMAGES/mockupPDF.png" alt="Puy du Fou" loading="lazy">
                     <div class="project-overlay">
                         <h3>Puy du Fou</h3>
                         <p>Application web de planification de visite au parc</p>
@@ -402,7 +409,7 @@
             <!-- Project 7 - MedocLab (VISIBLE) -->
             <div class="project-item" data-category="app">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupMEDOCLAB.png" alt="MedocLab">
+                    <img src="../IMAGES/mockupMEDOCLAB.png" alt="MedocLab" loading="lazy">
                     <div class="project-overlay">
                         <h3>MedocLab</h3>
                         <p>Infrastructure réseau Windows Server & Active Directory</p>
@@ -414,7 +421,7 @@
             <!-- Project 8 (VISIBLE) -->
             <div class="project-item" data-category="app">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets6.png" alt="Projet 5">
+                    <img src="../IMAGES/mockupprojets6.png" alt="Projet 6" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de gestion des déchêts</h3>
                         <p>Création d'un site "prototype" via VSCode</p>
@@ -426,7 +433,7 @@
             <!-- Project 9 (VISIBLE) -->
             <div class="project-item" data-category="web">
                 <div class="project-image">
-                    <img src="../IMAGES/mockupprojets7.png" alt="Projet 9">
+                    <img src="../IMAGES/mockupprojets7.png" alt="Projet 7" loading="lazy">
                     <div class="project-overlay">
                         <h3>Site de restauration à domicile</h3>
                         <p>Création d'un site "prototype" via VSCode</p>
@@ -1223,21 +1230,22 @@
     </div>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Vendor scripts -->
+<script src="https://unpkg.com/scrollreveal" defer></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 
-<!-- Tes fichiers JavaScript organisés -->
-<script src="../JS/preloader.js"></script>
-<script src="../JS/cursor.js"></script>
-<script src="../JS/navbar.js"></script>
-<script src="../JS/scrolling.js"></script>
-<script src="../JS/animations.js"></script>
-<script src="../JS/contact.js"></script>
-<script src="../JS/project-modal.js"></script>
-<script src="../JS/projects.js"></script>
-<script src="../JS/tools-carousel.js"></script>
-<script src="../JS/certifications-carousel.js"></script>
-<script src="../JS/timeline-scroll.js"></script>
-<script src="../JS/veille.js"></script>
-<script src="../JS/main.js"></script>
+<!-- App scripts (defer = non-blocking, runs in order after HTML parse) -->
+<script src="../JS/preloader.js" defer></script>
+<script src="../JS/cursor.js" defer></script>
+<script src="../JS/navbar.js" defer></script>
+<script src="../JS/scrolling.js" defer></script>
+<script src="../JS/animations.js" defer></script>
+<script src="../JS/contact.js" defer></script>
+<script src="../JS/project-modal.js" defer></script>
+<script src="../JS/projects.js" defer></script>
+<script src="../JS/tools-carousel.js" defer></script>
+<script src="../JS/certifications-carousel.js" defer></script>
+<script src="../JS/timeline-scroll.js" defer></script>
+<script src="../JS/veille.js" defer></script>
+<script src="../JS/main.js" defer></script>
 

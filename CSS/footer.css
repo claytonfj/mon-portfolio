@@ -64,20 +64,6 @@
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-bottom p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
-/* footer.css */
-.footer-bottom {
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -88,12 +74,4 @@
     font-size: 0.9rem;
     text-align: center;
     width: 100%;
-}
-
-/* Assure que ça reste centré sur mobile */
-@media (max-width: 576px) {
-    .footer-bottom {
-        justify-content: center;
-        text-align: center;
-    }
 }

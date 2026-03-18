@@ -3,12 +3,12 @@
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            
             if (targetElement) {
+                e.preventDefault();
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
@@ -20,9 +20,8 @@ function initSmoothScrolling() {
 
 function initScrollDown() {
     const scrollDownElement = document.querySelector('.scroll-down');
-    
     if (!scrollDownElement) return;
-    
+
     scrollDownElement.addEventListener('click', function() {
         window.scrollTo({
             top: window.innerHeight,
@@ -32,24 +31,22 @@ function initScrollDown() {
 }
 
 function initScrollAnimations() {
-    const animatedElements = new Set();
+    const elements = document.querySelectorAll('.about-image, .about-text, .skills-info, .skills-progress, .project-item, .contact-info, .contact-form, .certification-card');
+    if (!elements.length) return;
 
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.about-image, .about-text, .skills-info, .skills-progress, .project-item, .contact-info, .contact-form, .certification-card');
-        
-        elements.forEach(el => {
-            if (animatedElements.has(el)) return;
-            
-            const elementPosition = el.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
-            
-            if (elementPosition < screenPosition) {
-                el.classList.add('animate__animated', 'animate__fadeInUp');
-                animatedElements.add(el);
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                observer.unobserve(entry.target);
             }
         });
-    };
+    }, {
+        rootMargin: '0px 0px -15% 0px',
+        threshold: 0
+    });
 
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll();
+    elements.forEach(function(el) {
+        observer.observe(el);
+    });
 }
