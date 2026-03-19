@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://prod.spline.design">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -97,11 +99,11 @@
 
        <!-- Hero Section -->
     <section id="home" class="hero">
-        <video class="video-bg" autoplay muted loop playsinline preload="metadata">
-            <source src="../VIDEOS/VideoIA.mp4" type="video/mp4">
-        </video>
-        
-        <div class="container">
+        <div class="hero-bg"></div>
+        <canvas id="hero-particles" class="hero-particles"></canvas>
+        <div class="hero-glow" id="hero-glow"></div>
+
+        <div class="hero-layout">
             <div class="hero-content">
                 <h4 class="subtitle">Bonjour,</h4>
                 <h1 class="title">
@@ -110,14 +112,19 @@
                     <span class="title-word title-word-3">Mon Portfolio</span>
                 </h1>
                 <p class="description">Je m'appelle Clayton, j'ai 21 ans et suis passionné par la création digitale.</p>
-                
+
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-primary">Me contacter</a>
                     <a href="../IMAGES/CV Clayton 2025.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Voir mon CV</a>
                 </div>
             </div>
+
+            <!-- Robot 3D Spline -->
+            <div class="hero-3d">
+                <canvas id="spline-canvas"></canvas>
+            </div>
         </div>
-        
+
         <div class="scroll-down">
             <span>Scroll</span>
             <div class="mouse">
@@ -1253,6 +1260,9 @@
 <!-- Vendor scripts -->
 <script src="https://unpkg.com/scrollreveal" defer></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+<!-- Spline 3D Robot (module, runs independently) -->
+<script type="module" src="../JS/spline-hero.js"></script>
 
 <!-- App scripts (defer = non-blocking, runs in order after HTML parse) -->
 <script src="../JS/preloader.js" defer></script>

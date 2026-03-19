@@ -1,43 +1,75 @@
 /* hero.css */
+
+/* ── Section principale ── */
 .hero {
     position: relative;
     height: 100vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 2;
+    background-color: #050510;
 }
 
-/* Vidéo de fond */
-.video-bg {
+/* ── Fond dégradé épuré ── */
+.hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(106, 17, 203, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 40%, rgba(37, 117, 252, 0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(106, 17, 203, 0.06) 0%, transparent 60%);
+    z-index: 0;
+}
+
+/* ── Particules canvas ── */
+.hero-particles {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.6);
+    z-index: 1;
+    pointer-events: none;
 }
 
-.hero .container {
+/* ── Effet lumière souris ── */
+.hero-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(106, 17, 203, 0.15) 0%, rgba(37, 117, 252, 0.08) 40%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+    will-change: left, top;
+}
+
+/* ── Layout flex : texte + 3D ── */
+.hero-layout {
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
+/* ── Contenu texte ── */
 .hero-content {
-    position: relative;
-    max-width: 600px;
-    padding: 20px;
-    color: white;
-    z-index: 1;
+    flex: 0 1 50%;
+    max-width: 560px;
+    z-index: 3;
+    padding: 20px 0;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--gray-color);
     margin-bottom: 15px;
     display: inline-block;
 }
@@ -70,36 +102,27 @@
     gap: 20px;
 }
 
-.image-wrapper {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 10px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gradient-circle {
+/* ── Robot 3D Spline ── */
+.hero-3d {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.3;
-    filter: blur(30px);
-    animation: pulse 6s infinite alternate;
+    right: calc(-50vw + 50%);
+    bottom: -110px;
+    height: calc(100% + 150px);
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible;
+    z-index: 2;
 }
 
+.hero-3d canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* ── Scroll down ── */
 .scroll-down {
     position: absolute;
     bottom: 30px;
@@ -113,6 +136,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
+    z-index: 5;
 }
 
 .mouse {
@@ -134,4 +158,13 @@
     left: 50%;
     transform: translateX(-50%);
     animation: scrollAnimation 2s infinite;
+}
+
+/* ── Coller About au hero ── */
+.about {
+    margin-top: 0;
+    padding-top: 100px;
+    position: relative;
+    z-index: 3;
+    background-color: var(--dark-color);
 }
