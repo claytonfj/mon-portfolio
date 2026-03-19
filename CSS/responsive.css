@@ -13,6 +13,7 @@
 
     .hero-content {
         margin-bottom: 50px;
+        text-align: center;
     }
 
     .hero-btns {
@@ -25,10 +26,61 @@
 
     .about-image {
         margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-details {
+        text-align: center;
     }
 
     .skills-content {
         flex-direction: column;
+    }
+
+    .skills-info {
+        text-align: center;
+    }
+
+    .skills-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Skills progress bars — full width when stacked */
+    .skills-progress {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .progress-item {
+        width: 100%;
+    }
+
+    /* Center section headers & headings */
+    .section-header {
+        text-align: center;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+
+    /* Center image container */
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -50,6 +102,75 @@
 
     .contact-content {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-socials {
+        justify-content: center;
+    }
+
+    .info-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info-item {
+        text-align: left;
+    }
+
+    .info-item h4,
+    .info-item p {
+        text-align: left;
+    }
+
+    /* Footer centering for tablet */
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links h4 {
+        text-align: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
+    .footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .modal-image-container {
@@ -187,15 +308,37 @@
     }
 
     .modal-meta {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
         margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .modal-meta span {
+        width: auto;
+        flex: none;
+        white-space: nowrap;
     }
 
     .modal-actions {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 10px;
         margin-top: 20px;
+        justify-content: center;
+    }
+
+    .modal-actions .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: auto;
+    }
+
+    .modal-divider {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .tech-icons {
@@ -260,7 +403,9 @@
         width: auto;
         min-width: fit-content;
         display: inline-flex;
+        align-items: center;
         justify-content: center;
+        gap: 8px;
         white-space: nowrap;
         padding-left: 30px;
         padding-right: 30px;
@@ -356,6 +501,10 @@
     }
 
     /* Footer centering */
+    .footer-links {
+        text-align: center;
+    }
+
     .footer-links h4 {
         text-align: center;
         position: relative;
@@ -384,6 +533,22 @@
         flex-direction: column;
         align-items: center;
         gap: 12px;
+    }
+
+    .footer-links ul li,
+    .footer-links ul li a {
+        text-align: center;
+    }
+
+    /* Project overlay text centering */
+    .project-overlay {
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-overlay h3,
+    .project-overlay p {
+        text-align: center;
     }
 
     /* Timeline header centering */
@@ -450,12 +615,16 @@
     }
 
     .modal-actions {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .modal-meta {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
     }
 
     /* Swiper certifications */
@@ -543,15 +712,14 @@
     }
 
     .modal-container {
-        width: 100%;
-        height: 100%;
-        max-height: 100vh;
-        border-radius: 0;
+        width: 95%;
+        max-height: 90vh;
+        border-radius: 12px;
     }
 
     .modal-image-container {
         height: 180px;
-        border-radius: 0;
+        border-radius: 12px 12px 0 0;
     }
 
     .modal-text-content {

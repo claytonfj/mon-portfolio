@@ -358,19 +358,19 @@
         // ── VEILLE TECHNOLOGIQUE ─────────────────────────────────────────
         {
             keywords: ['veille', 'veille techno', 'veille technologique', 'actualité', 'actualite', 'news tech', 'info tech', 'technologie actualité'],
-            answer: 'Clayton effectue une <strong>veille technologique active</strong> dans 3 domaines :\n\n🤖 <strong>IA & Innovation</strong> — LLMs, Copilot, Mistral, bonnes pratiques en production\n🛡️ <strong>Cybersécurité</strong> — OWASP Top 10, prompt injection, ANSSI\n💻 <strong>Développement Web</strong> — CSS moderne, architecture Front-End, performances'
+            answer: 'Clayton effectue une <strong>veille technologique active</strong> centrée sur l\'<strong>IA générative</strong> (image & vidéo) :\n\n🎬 <strong>IA Vidéo</strong> — Kling 3.0, Seedance 2.0, Sora 2\n🖼️ <strong>IA Image</strong> — Midjourney V7, GPT-4o, FLUX.2\n🛠️ <strong>Outils & Workflows</strong> — Runway Gen-4.5, Higgsfield, Veo 3.1'
         },
         {
-            keywords: ['intelligence artificielle', 'ia', 'ai', 'llm', 'gpt', 'claude', 'mistral', 'copilot', 'machine learning', 'ml', 'chatgpt'],
-            answer: 'Clayton suit de près l\'<strong>actualité de l\'IA</strong> : GitHub Copilot, Mistral Large 2, LLMs en production (RAG, évaluation, optimisation des coûts). Il intègre ces outils dans sa pratique de développement.'
+            keywords: ['intelligence artificielle', 'ia', 'ai', 'llm', 'gpt', 'claude', 'mistral', 'copilot', 'machine learning', 'ml', 'chatgpt', 'midjourney', 'sora', 'kling', 'seedance', 'flux', 'runway', 'higgsfield', 'veo', 'dall-e'],
+            answer: 'Clayton suit de près l\'<strong>actualité de l\'IA générative</strong> : Kling 3.0, Seedance 2.0, Sora 2 pour la vidéo — Midjourney V7, GPT-4o, FLUX.2 pour l\'image. Il s\'intéresse à l\'impact de ces outils sur les métiers créatifs.'
         },
         {
-            keywords: ['cybersécurité', 'cybersecurite', 'securite', 'sécurité', 'owasp', 'hacking', 'protection', 'vulnérabilité', 'vulnerabilite'],
-            answer: 'Clayton se tient informé sur la <strong>cybersécurité web</strong> : OWASP Top 10 2025 (dont les nouvelles vulnérabilités IA), prompt injection, recommandations ANSSI. La sécurité est intégrée dans sa façon de coder.'
+            keywords: ['vidéo ia', 'video ia', 'génération vidéo', 'generation video', 'kling', 'seedance', 'sora', 'pika', 'veo'],
+            answer: 'Clayton suit les derniers modèles de <strong>génération vidéo par IA</strong> : Kling 3.0 (4K HDR, multi-plans), Seedance 2.0 (ByteDance), Sora 2 (OpenAI), Runway Gen-4.5 et Veo 3.1 (Google). Ces outils transforment la production créative.'
         },
         {
-            keywords: ['css moderne', 'tendance css', 'nouveau css', 'css 2025', 'container query', 'css avancé'],
-            answer: 'Clayton suit les <strong>évolutions du CSS moderne</strong> : container queries, nouvelles propriétés, optimisations de performance et nouvelles techniques d\'architecture Front-End.'
+            keywords: ['image ia', 'génération image', 'generation image', 'midjourney', 'dall-e', 'stable diffusion', 'flux'],
+            answer: 'Clayton explore les modèles de <strong>génération d\'images par IA</strong> : Midjourney V7 (photoréalisme), GPT-4o Image (multimodal natif), FLUX.2 (open-source). Le niveau de réalisme atteint en 2025-2026 est impressionnant.'
         },
 
         // ── LE PORTFOLIO LUI-MÊME ─────────────────────────────────────────

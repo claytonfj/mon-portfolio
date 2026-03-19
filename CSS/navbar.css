@@ -108,8 +108,8 @@
 /* ── Burger button (mobile) ── */
 .menu-btn {
     display: none;
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -119,8 +119,8 @@
 }
 
 .menu-btn__burger {
-    width: 24px;
-    height: 2px;
+    width: 30px;
+    height: 2.5px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,19 +131,38 @@
 .menu-btn__burger::after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
+    width: 30px;
+    height: 2.5px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-btn__burger::before {
-    transform: translateY(-7px);
+    transform: translateY(-9px);
 }
 
 .menu-btn__burger::after {
-    transform: translateY(7px);
+    transform: translateY(9px);
+}
+
+/* ── Mobile Menu Overlay ── */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ── Mobile Menu ── */
@@ -243,11 +262,11 @@
     }
 
     .navbar .logo img {
-        height: 45px;
+        height: 60px;
     }
 
     .navbar.scrolled .logo img {
-        height: 38px;
+        height: 50px;
     }
 
     .navbar {

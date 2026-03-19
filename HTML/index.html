@@ -138,7 +138,7 @@
                 <div class="about-image">
                     <div class="image-container">
                         <picture>
-                            <source media="(max-width: 768px)" srcset="../IMAGES/Macbookcode2.png">
+                            <source media="(max-width: 1200px)" srcset="../IMAGES/Macbookcode2.png">
                             <img src="../IMAGES/Macbookcode.png" alt="À propos" loading="lazy">
                         </picture>
                     </div>
@@ -902,203 +902,223 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Veille <span>Informatique</span></h2>
-                <p class="section-subtitle">Technologie & tendances</p>
+                <p class="section-subtitle">IA Générative — Image & Vidéo</p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="veille-intro">
+                <div class="veille-intro-text">
+                    <span class="veille-label"><i class="fas fa-radar"></i> Sujet de veille</span>
+                    <h3>L'évolution des IA génératives d'images et de vidéos et leur impact sur les métiers créatifs.</h3>
+                    <div class="veille-intro-bar"></div>
+                    <p>Je suis l'évolution rapide des IA génératives à travers des sources variées : presse spécialisée, blogs officiels, flux RSS, communautés en ligne et créateurs de contenu.</p>
+                    <p>Des outils comme Sora, Midjourney ou Runway sont devenus de véritables solutions de production, capables de générer images photoréalistes et vidéos avec audio synchronisé. Une révolution qui questionne l'avenir des métiers créatifs et pousse les professionnels à intégrer l'IA dans leur workflow.</p>
+                    <div class="veille-sources">
+                        <span><i class="fas fa-rss"></i> Feedly</span>
+                        <span><i class="fab fa-reddit-alien"></i> Reddit</span>
+                        <span><i class="fab fa-youtube"></i> YouTube</span>
+                        <span><i class="fas fa-newspaper"></i> TechCrunch</span>
+                        <span><i class="fas fa-blog"></i> OpenAI Blog</span>
+                    </div>
+                </div>
+                <div class="veille-intro-image">
+                    <div class="veille-image-container">
+                        <img src="../IMAGES/IA-Générative.png" alt="IA Générative" loading="lazy">
+                    </div>
+                </div>
             </div>
 
             <!-- Filtres -->
             <div class="veille-filters">
                 <button class="veille-filter active" data-filter="all">Tout</button>
-                <button class="veille-filter" data-filter="ia">
-                    <i class="fas fa-robot"></i> IA & Innovation
+                <button class="veille-filter" data-filter="video">
+                    <i class="fas fa-video"></i> IA Vidéo
                 </button>
-                <button class="veille-filter" data-filter="securite">
-                    <i class="fas fa-shield-alt"></i> Cybersécurité
+                <button class="veille-filter" data-filter="image">
+                    <i class="fas fa-image"></i> IA Image
                 </button>
-                <button class="veille-filter" data-filter="web">
-                    <i class="fas fa-code"></i> Développement Web
-                </button>
-                <button class="veille-filter" data-filter="devops">
-                    <i class="fas fa-server"></i> DevOps
+                <button class="veille-filter" data-filter="outils">
+                    <i class="fas fa-tools"></i> Outils & Workflows
                 </button>
             </div>
 
             <!-- Grille de cartes -->
             <div class="veille-grid">
 
-                <!-- IA 1 -->
-                <div class="veille-card" data-category="ia">
+                <!-- Vidéo 1 — Kling 3.0 -->
+                <div class="veille-card" data-category="video">
                     <div class="veille-card-body">
                         <div class="veille-card-header">
-                            <span class="veille-category cat-ia">
-                                <i class="fas fa-robot"></i> IA & Innovation
+                            <span class="veille-category cat-video">
+                                <i class="fas fa-video"></i> IA Vidéo
                             </span>
-                            <span class="veille-source">GitHub Blog</span>
+                            <span class="veille-source">CyberNews</span>
                         </div>
-                        <h3 class="veille-card-title">GitHub Copilot : l'IA intégrée à tout le workflow de développement</h3>
-                        <p class="veille-card-excerpt">GitHub Copilot évolue au-delà de l'autocomplétion : revue de code automatisée, génération de tests unitaires et suggestions contextuelles dans les PR transforment en profondeur la façon de coder.</p>
+                        <h3 class="veille-card-title">Kling 3.0 : le modèle vidéo IA qui rivalise avec le cinéma</h3>
+                        <p class="veille-card-excerpt">Kuaishou lance Kling 3.0 avec des séquences multi-plans en 4K HDR à 60 fps, une physique réaliste et la génération audio native synchronisée. Un tournant pour la production vidéo par IA.</p>
+                        <div class="veille-card-footer">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Fév. 2026</span>
+                            <a href="https://cybernews.com/ai-tools/kling-ai-review/" target="_blank" rel="noopener" class="veille-read-more">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 2 — Seedance 2.0 -->
+                <div class="veille-card" data-category="video">
+                    <div class="veille-card-body">
+                        <div class="veille-card-header">
+                            <span class="veille-category cat-video">
+                                <i class="fas fa-video"></i> IA Vidéo
+                            </span>
+                            <span class="veille-source">PetaPixel</span>
+                        </div>
+                        <h3 class="veille-card-title">Seedance 2.0 : ByteDance bouleverse la génération vidéo IA</h3>
+                        <p class="veille-card-excerpt">Seedance 2.0 génère des vidéos multi-plans en 2K avec audio natif et lip-sync. Si réaliste qu'il a provoqué un débat mondial sur les droits d'auteur après des clips viraux imitant des acteurs.</p>
+                        <div class="veille-card-footer">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Fév. 2026</span>
+                            <a href="https://petapixel.com/2026/02/09/bytedance-seedance-2-ai-video/" target="_blank" rel="noopener" class="veille-read-more">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 3 — Sora 2 -->
+                <div class="veille-card" data-category="video">
+                    <div class="veille-card-body">
+                        <div class="veille-card-header">
+                            <span class="veille-category cat-video">
+                                <i class="fas fa-video"></i> IA Vidéo
+                            </span>
+                            <span class="veille-source">OpenAI</span>
+                        </div>
+                        <h3 class="veille-card-title">Sora 2 : OpenAI repousse les limites de la vidéo générée par IA</h3>
+                        <p class="veille-card-excerpt">Sora 2 génère des vidéos de 15 à 25 secondes avec une cohérence physique impressionnante, dialogue synchronisé et effets sonores. OpenAI vise des clips d'une minute pour la prochaine version.</p>
+                        <div class="veille-card-footer">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Sept. 2025</span>
+                            <a href="https://openai.com/index/sora-2/" target="_blank" rel="noopener" class="veille-read-more">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 1 — Midjourney V7 -->
+                <div class="veille-card" data-category="image">
+                    <div class="veille-card-body">
+                        <div class="veille-card-header">
+                            <span class="veille-category cat-image">
+                                <i class="fas fa-image"></i> IA Image
+                            </span>
+                            <span class="veille-source">TechCrunch</span>
+                        </div>
+                        <h3 class="veille-card-title">Midjourney V7 : une architecture totalement repensée pour le photoréalisme</h3>
+                        <p class="veille-card-excerpt">Midjourney V7 introduit un Draft Mode 10x plus rapide, une meilleure cohérence des mains et visages, et la personnalisation par défaut du modèle. La génération vidéo suit en juin 2025.</p>
+                        <div class="veille-card-footer">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Avril 2025</span>
+                            <a href="https://techcrunch.com/2025/04/03/midjourney-releases-its-first-new-ai-image-model-in-nearly-a-year/" target="_blank" rel="noopener" class="veille-read-more">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 — GPT-4o Image Generation -->
+                <div class="veille-card" data-category="image">
+                    <div class="veille-card-body">
+                        <div class="veille-card-header">
+                            <span class="veille-category cat-image">
+                                <i class="fas fa-image"></i> IA Image
+                            </span>
+                            <span class="veille-source">OpenAI</span>
+                        </div>
+                        <h3 class="veille-card-title">GPT-4o Image : OpenAI remplace DALL-E par un modèle natif multimodal</h3>
+                        <p class="veille-card-excerpt">GPT-4o intègre la génération d'images directement dans ChatGPT, abandonnant DALL-E 3. Un changement d'architecture fondamental : texte et image dans un seul modèle unifié.</p>
                         <div class="veille-card-footer">
                             <span class="veille-date"><i class="far fa-calendar"></i> Mars 2025</span>
-                            <a href="https://github.blog" target="_blank" rel="noopener" class="veille-read-more">
+                            <a href="https://openai.com/index/introducing-4o-image-generation/" target="_blank" rel="noopener" class="veille-read-more">
                                 Lire <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- IA 2 -->
-                <div class="veille-card" data-category="ia">
+                <!-- Image 3 — FLUX.2 -->
+                <div class="veille-card" data-category="image">
                     <div class="veille-card-body">
                         <div class="veille-card-header">
-                            <span class="veille-category cat-ia">
-                                <i class="fas fa-robot"></i> IA & Innovation
+                            <span class="veille-category cat-image">
+                                <i class="fas fa-image"></i> IA Image
                             </span>
-                            <span class="veille-source">Mistral AI</span>
+                            <span class="veille-source">BentoML</span>
                         </div>
-                        <h3 class="veille-card-title">Mistral Large 2 : le modèle open-source européen rivalise avec les géants</h3>
-                        <p class="veille-card-excerpt">La startup française Mistral AI publie son nouveau modèle en open-weights, affichant des performances comparables à GPT-4 sur plusieurs benchmarks, tout en restant déployable en local.</p>
+                        <h3 class="veille-card-title">FLUX.2 : le modèle open-source de Black Forest Labs qui défie les géants</h3>
+                        <p class="veille-card-excerpt">FLUX.2 de Black Forest Labs (ex-Stability AI) passe de l'expérimental au production-grade avec un modèle 32B open-weight. Photoréalisme, rendu de texte et contrôle précis surpassent SDXL.</p>
                         <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Fév. 2025</span>
-                            <a href="https://mistral.ai/news" target="_blank" rel="noopener" class="veille-read-more">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Nov. 2025</span>
+                            <a href="https://www.bentoml.com/blog/a-guide-to-open-source-image-generation-models" target="_blank" rel="noopener" class="veille-read-more">
                                 Lire <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- IA 3 -->
-                <div class="veille-card" data-category="ia">
+                <!-- Outils 1 — Runway Gen-4.5 -->
+                <div class="veille-card" data-category="outils">
                     <div class="veille-card-body">
                         <div class="veille-card-header">
-                            <span class="veille-category cat-ia">
-                                <i class="fas fa-robot"></i> IA & Innovation
+                            <span class="veille-category cat-outils">
+                                <i class="fas fa-tools"></i> Outils & Workflows
                             </span>
-                            <span class="veille-source">InfoQ</span>
+                            <span class="veille-source">CNBC</span>
                         </div>
-                        <h3 class="veille-card-title">LLM en production : bonnes pratiques et pièges à éviter en 2025</h3>
-                        <p class="veille-card-excerpt">Retours d'expérience sur l'intégration des grands modèles de langage en production : gestion des hallucinations, RAG, évaluation continue et optimisation des coûts d'inférence.</p>
+                        <h3 class="veille-card-title">Runway Gen-4.5 : le workflow créatif complet propulsé par l'IA</h3>
+                        <p class="veille-card-excerpt">Runway Gen-4.5 prend la tête du classement Video Arena, surpassant Google et OpenAI. Audio natif, multi-plans et vidéos jusqu'à une minute transforment le workflow des créateurs.</p>
                         <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Jan. 2025</span>
-                            <a href="https://www.infoq.com" target="_blank" rel="noopener" class="veille-read-more">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Déc. 2025</span>
+                            <a href="https://www.cnbc.com/2025/12/01/runway-gen-4-5-video-model-google-open-ai.html" target="_blank" rel="noopener" class="veille-read-more">
                                 Lire <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sécurité 1 -->
-                <div class="veille-card" data-category="securite">
+                <!-- Outils 2 — Higgsfield -->
+                <div class="veille-card" data-category="outils">
                     <div class="veille-card-body">
                         <div class="veille-card-header">
-                            <span class="veille-category cat-securite">
-                                <i class="fas fa-shield-alt"></i> Cybersécurité
+                            <span class="veille-category cat-outils">
+                                <i class="fas fa-tools"></i> Outils & Workflows
                             </span>
-                            <span class="veille-source">OWASP</span>
+                            <span class="veille-source">OpenAI</span>
                         </div>
-                        <h3 class="veille-card-title">OWASP Top 10 2025 : les nouvelles menaces qui redéfinissent la sécurité web</h3>
-                        <p class="veille-card-excerpt">L'édition 2025 de l'OWASP Top 10 intègre pour la première fois des vulnérabilités propres aux applications IA, dont les attaques par injection de prompts et la manipulation de modèles.</p>
+                        <h3 class="veille-card-title">Higgsfield : la startup qui transforme une idée en vidéo cinématique</h3>
+                        <p class="veille-card-excerpt">Higgsfield atteint 15 millions d'utilisateurs et 200M$ de revenus en 9 mois. Sa plateforme permet de créer des vidéos pro à partir d'un simple lien produit ou d'une image.</p>
                         <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Fév. 2025</span>
-                            <a href="https://owasp.org/Top10" target="_blank" rel="noopener" class="veille-read-more">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Jan. 2026</span>
+                            <a href="https://openai.com/index/higgsfield/" target="_blank" rel="noopener" class="veille-read-more">
                                 Lire <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sécurité 2 -->
-                <div class="veille-card" data-category="securite">
+                <!-- Outils 3 — Veo 3.1 -->
+                <div class="veille-card" data-category="outils">
                     <div class="veille-card-body">
                         <div class="veille-card-header">
-                            <span class="veille-category cat-securite">
-                                <i class="fas fa-shield-alt"></i> Cybersécurité
+                            <span class="veille-category cat-outils">
+                                <i class="fas fa-tools"></i> Outils & Workflows
                             </span>
-                            <span class="veille-source">ANSSI</span>
+                            <span class="veille-source">Google Blog</span>
                         </div>
-                        <h3 class="veille-card-title">Prompt Injection : quand l'IA devient une surface d'attaque critique</h3>
-                        <p class="veille-card-excerpt">Les attaques par injection de prompts permettent de détourner des assistants IA pour exfiltrer des données ou contourner des politiques de sécurité. L'ANSSI publie ses recommandations.</p>
+                        <h3 class="veille-card-title">Veo 3.1 : Google intègre la vidéo IA directement sur mobile</h3>
+                        <p class="veille-card-excerpt">Veo 3.1 de Google DeepMind génère des vidéos verticales pour YouTube Shorts avec upscale 4K, audio natif synchronisé et création depuis le téléphone. L'IA vidéo devient mobile-first.</p>
                         <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Jan. 2025</span>
-                            <a href="https://www.ssi.gouv.fr" target="_blank" rel="noopener" class="veille-read-more">
-                                Lire <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sécurité 3 -->
-                <div class="veille-card" data-category="securite">
-                    <div class="veille-card-body">
-                        <div class="veille-card-header">
-                            <span class="veille-category cat-securite">
-                                <i class="fas fa-shield-alt"></i> Cybersécurité
-                            </span>
-                            <span class="veille-source">The Hacker News</span>
-                        </div>
-                        <h3 class="veille-card-title">Zero-Trust Architecture : le nouveau standard pour les SI modernes</h3>
-                        <p class="veille-card-excerpt">Le modèle Zero Trust s'impose comme la réponse aux menaces internes et aux architectures cloud hybrides : ne jamais faire confiance, toujours vérifier — une philosophie désormais incontournable.</p>
-                        <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Mars 2025</span>
-                            <a href="https://thehackernews.com" target="_blank" rel="noopener" class="veille-read-more">
-                                Lire <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web 1 -->
-                <div class="veille-card" data-category="web">
-                    <div class="veille-card-body">
-                        <div class="veille-card-header">
-                            <span class="veille-category cat-web">
-                                <i class="fas fa-code"></i> Développement Web
-                            </span>
-                            <span class="veille-source">Vercel Blog</span>
-                        </div>
-                        <h3 class="veille-card-title">Next.js 15 : Server Actions améliorées et Partial Prerendering en stable</h3>
-                        <p class="veille-card-excerpt">Next.js 15 finalise le Partial Prerendering (PPR) pour combiner rendu statique et dynamique sur une même page, et affine le modèle de caching pour mieux refléter les attentes des développeurs.</p>
-                        <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Déc. 2024</span>
-                            <a href="https://nextjs.org/blog" target="_blank" rel="noopener" class="veille-read-more">
-                                Lire <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web 2 -->
-                <div class="veille-card" data-category="web">
-                    <div class="veille-card-body">
-                        <div class="veille-card-header">
-                            <span class="veille-category cat-web">
-                                <i class="fas fa-code"></i> Développement Web
-                            </span>
-                            <span class="veille-source">Tailwind Blog</span>
-                        </div>
-                        <h3 class="veille-card-title">Tailwind CSS v4 : réécriture complète du moteur avec une DX repensée</h3>
-                        <p class="veille-card-excerpt">Tailwind v4 abandonne le fichier de config JavaScript au profit d'une configuration en CSS natif, intègre un nouveau moteur haute performance et réduit drastiquement les temps de build.</p>
-                        <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Jan. 2025</span>
-                            <a href="https://tailwindcss.com/blog" target="_blank" rel="noopener" class="veille-read-more">
-                                Lire <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DevOps 1 -->
-                <div class="veille-card" data-category="devops">
-                    <div class="veille-card-body">
-                        <div class="veille-card-header">
-                            <span class="veille-category cat-devops">
-                                <i class="fas fa-server"></i> DevOps
-                            </span>
-                            <span class="veille-source">Docker Blog</span>
-                        </div>
-                        <h3 class="veille-card-title">Docker Scout : analyser et sécuriser ses images en continu dans le pipeline</h3>
-                        <p class="veille-card-excerpt">Docker Scout s'intègre désormais nativement dans les GitHub Actions et GitLab CI pour détecter les CVE dans les images dès le build, avant tout déploiement en production.</p>
-                        <div class="veille-card-footer">
-                            <span class="veille-date"><i class="far fa-calendar"></i> Fév. 2025</span>
-                            <a href="https://www.docker.com/blog" target="_blank" rel="noopener" class="veille-read-more">
+                            <span class="veille-date"><i class="far fa-calendar"></i> Jan. 2026</span>
+                            <a href="https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/" target="_blank" rel="noopener" class="veille-read-more">
                                 Lire <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
