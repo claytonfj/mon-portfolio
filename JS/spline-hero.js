@@ -86,8 +86,12 @@ if (particleCanvas) {
 
   function resize() {
     const hero = document.getElementById('home');
-    w = particleCanvas.width = hero.offsetWidth;
-    h = particleCanvas.height = hero.offsetHeight;
+    const newW = hero.offsetWidth;
+    const newH = hero.offsetHeight;
+    // Éviter les redimensionnements inutiles sur mobile (barre d'adresse)
+    if (Math.abs(newW - w) < 5 && Math.abs(newH - h) < 100) return;
+    w = particleCanvas.width = newW;
+    h = particleCanvas.height = newH;
   }
 
   function createParticles() {
@@ -122,8 +126,13 @@ if (particleCanvas) {
     requestAnimationFrame(draw);
   }
 
+  w = 0; h = 0; // Forcer le premier resize
   resize();
   createParticles();
   draw();
-  window.addEventListener('resize', () => { resize(); createParticles(); });
+  window.addEventListener('resize', () => {
+    const prevW = w, prevH = h;
+    resize();
+    if (w !== prevW || h !== prevH) createParticles();
+  });
 }
