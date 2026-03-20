@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initActiveNav();
     initSmoothScrolling();
     initScrollAnimations();
-    initHeroTextAnimation();
     initToolsCarousel();
     initScrollDown();
 

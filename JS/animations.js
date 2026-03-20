@@ -1,14 +1,42 @@
 // animations.js - Animations diverses
 
 function initHeroTextAnimation() {
+    const subtitle = document.querySelector('.hero-content .subtitle');
     const titleWords = document.querySelectorAll('.title-word');
-    
+    const description = document.querySelector('.hero-content .description');
+    const heroBtns = document.querySelector('.hero-content .hero-btns');
+
+    // Animer le subtitle en premier
+    if (subtitle) {
+        setTimeout(() => {
+            subtitle.style.opacity = '1';
+            subtitle.style.transform = 'translateY(0)';
+        }, 200);
+    }
+
+    // Animer les mots du titre avec décalage
     titleWords.forEach((word, index) => {
         setTimeout(() => {
             word.style.opacity = '1';
             word.style.transform = 'translateY(0)';
-        }, index * 300 + 500);
+        }, index * 250 + 600);
     });
+
+    // Animer la description
+    if (description) {
+        setTimeout(() => {
+            description.style.opacity = '1';
+            description.style.transform = 'translateY(0)';
+        }, 1400);
+    }
+
+    // Animer les boutons
+    if (heroBtns) {
+        setTimeout(() => {
+            heroBtns.style.opacity = '1';
+            heroBtns.style.transform = 'translateY(0)';
+        }, 1700);
+    }
 }
 
 function initScrollReveal() {

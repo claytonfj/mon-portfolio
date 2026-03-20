@@ -6,6 +6,11 @@ const loader = document.getElementById('spline-loader');
 
 const isMobile = window.innerWidth <= 992;
 
+if (!canvas || isMobile) {
+  // Pas de Spline sur mobile ou si canvas absent — débloquer le preloader
+  window.addEventListener('load', () => window.dispatchEvent(new Event('splineReady')));
+}
+
 if (canvas && !isMobile) {
   const app = new Application(canvas);
   app
@@ -27,11 +32,15 @@ if (canvas && !isMobile) {
       }
       resizeSplineCanvas();
       window.addEventListener('resize', resizeSplineCanvas);
+
+      // Signaler que le robot 3D est prêt
+      window.dispatchEvent(new Event('splineReady'));
     })
     .catch(() => {
       // Fallback : masquer le loader et le canvas, le dégradé reste visible
       if (loader) loader.style.display = 'none';
       if (canvas) canvas.style.display = 'none';
+      window.dispatchEvent(new Event('splineReady'));
     });
 
   // ── Forward pointer events au canvas Spline ──
