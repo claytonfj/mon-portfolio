@@ -116,6 +116,9 @@
     z-index: 1001;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .menu-btn__burger {

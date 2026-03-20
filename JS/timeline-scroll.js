@@ -74,7 +74,7 @@ function initTimelineScroll() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 
     // Init
     updateLine();

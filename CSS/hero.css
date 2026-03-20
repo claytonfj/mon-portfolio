@@ -44,6 +44,7 @@
     transition: opacity 0.3s ease;
     transform: translate(-50%, -50%);
     will-change: left, top;
+    contain: layout style;
 }
 
 /* ── Layout flex : texte + 3D ── */

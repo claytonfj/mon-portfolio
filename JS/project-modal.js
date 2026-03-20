@@ -29,7 +29,7 @@ function initProjectModal() {
             category: 'Développement Web',
             date: '2026',
             description: 'Création d\'un site vitrine moderne pour une entreprise de gestion des nuisibles avec galerie interactive, système de devis en ligne et animations CSS personnalisées.',
-            image: IMG + 'screenMaugesnuisibles.png',
+            image: IMG + 'screenMaugesnuisibles.jpg',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: 'https://mauges-nuisibles.fr/',
             showNotHostedMessage: false
@@ -49,7 +49,7 @@ function initProjectModal() {
             category: 'Développement Front-end',
             date: '2024',
             description: 'Création d\'un site vitrine moderne pour une entreprise de charpente avec galerie interactive, système de devis en ligne et animations CSS personnalisées.',
-            image: IMG + 'screennjf.png',
+            image: IMG + 'screennjf.jpg',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -59,7 +59,7 @@ function initProjectModal() {
             category: 'Développement Fullstack',
             date: '2025',
             description: 'Plateforme complète pour un food truck avec système de commande en ligne, suivi en temps réel et interface administrateur.',
-            image: IMG + 'screentruck.png',
+            image: IMG + 'screentruck.jpg',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -91,17 +91,15 @@ function initProjectModal() {
             description: 'Projet d\'infrastructure réseau complet pour l\'entreprise fictive MedocLab, incluant la mise en place d\'un serveur Windows Server 2019 avec Active Directory, la gestion des utilisateurs, des stratégies de groupe (GPO), et la configuration des services réseau essentiels (DNS, DHCP, partages réseau, scripts PowerShell).',
             image: IMG + 'screenMEDOCLAB.png',
             techStack: [],
-            liveLink: IMG + 'Document%20technique%20AP1.1%20R%C3%A9seaux%20Clayton.pdf',
-            showNotHostedMessage: false,
-            buttonText: 'Voir la documentation',
-            buttonIcon: 'fas fa-file-alt'
+            liveLink: '#',
+            showNotHostedMessage: true
         },
         'projet8': {
             title: 'Site de gestion des déchêts',
             category: 'Application Web',
             date: '2024',
             description: 'Outil de gestion pour les centres de tri avec tableau de bord analytique, suivi des flux de déchets et génération de rapports.',
-            image: IMG + 'screendechets.png',
+            image: IMG + 'screendechets.jpg',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true
@@ -111,7 +109,7 @@ function initProjectModal() {
             category: 'Développement Fullstack',
             date: '2025',
             description: 'Marketplace mettant en relation chefs à domicile et clients avec système de réservation, paiement en ligne et évaluations.',
-            image: IMG + 'screenburger.png',
+            image: IMG + 'screenburger.jpg',
             techStack: ['html', 'css', 'js', 'php'],
             liveLink: '#',
             showNotHostedMessage: true

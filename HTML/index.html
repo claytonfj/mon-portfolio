@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Clayton Foin-Jolivet — Développeur web passionné par la création digitale.">
     <meta name="theme-color" content="#0f0f1a">
+    <meta name="author" content="Clayton Foin-Jolivet">
+    <meta property="og:title" content="Clayton FOIN-JOLIVET | Portfolio">
+    <meta property="og:description" content="Portfolio de Clayton Foin-Jolivet — Développeur web passionné par la création digitale.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://claytonfj.github.io/mon-portfolio/">
+    <meta property="og:image" content="https://claytonfj.github.io/mon-portfolio/IMAGES/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://claytonfj.github.io/mon-portfolio/">
     <title>Clayton FOIN-JOLIVET | Portfolio</title>
 
     <!-- Preconnect for faster external resource loading -->
@@ -52,14 +60,14 @@
     </div>
 
     <!-- Cursor personnalisé -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="#home" class="logo">
-                <img src="../IMAGES/logo.png" alt="Mon Logo">
+                <img src="../IMAGES/logo.png" alt="Mon Logo" width="40" height="40">
             </a>
 
             <div class="navbar-capsule">
@@ -72,9 +80,9 @@
                 <a href="#veille">Veille</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="menu-btn">
+            <button class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false">
                 <div class="menu-btn__burger"></div>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -91,8 +99,8 @@
             <a href="#veille">Veille</a>
             <a href="#contact">Contact</a>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/clayton-foin-jolivet-907069257/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/claytonfj" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/clayton-foin-jolivet-907069257/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/claytonfj" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </div>
@@ -145,7 +153,7 @@
                 <div class="about-image">
                     <div class="image-container">
                         <picture>
-                            <source media="(max-width: 1200px)" srcset="../IMAGES/Macbookcode2.png">
+                            <source media="(max-width: 1200px)" srcset="../IMAGES/Macbookcode2.jpg">
                             <img src="../IMAGES/Macbookcode.png" alt="À propos" loading="lazy">
                         </picture>
                     </div>
@@ -930,7 +938,7 @@
                 </div>
                 <div class="veille-intro-image">
                     <div class="veille-image-container">
-                        <img src="../IMAGES/IA-Generative.png" alt="IA Générative" loading="lazy">
+                        <img src="../IMAGES/IA-Generative.jpg" alt="IA Générative" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1212,7 +1220,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <a href="#home" class="logo">
-                        <img src="../IMAGES/logo.png" alt="Mon Logo">
+                        <img src="../IMAGES/logo.png" alt="Mon Logo" width="40" height="40">
                     </a>
                     <p>Création de solutions web modernes et performantes.</p>
                 </div>

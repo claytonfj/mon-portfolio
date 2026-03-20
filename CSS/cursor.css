@@ -9,7 +9,9 @@
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 999;
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    will-change: left, top, transform;
+    contain: layout style;
 }
 
 .cursor-follower {
@@ -22,4 +24,6 @@
     pointer-events: none;
     z-index: 998;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    will-change: left, top;
+    contain: layout style;
 }

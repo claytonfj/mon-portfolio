@@ -27,7 +27,7 @@ function initCustomCursor() {
         mouseY = e.clientY;
         cursor.style.left = mouseX + 'px';
         cursor.style.top = mouseY + 'px';
-    });
+    }, { passive: true });
 
     rafId = requestAnimationFrame(updateFollower);
 
@@ -39,7 +39,7 @@ function initCustomCursor() {
             cursorFollower.style.width = '20px';
             cursorFollower.style.height = '20px';
         }
-    });
+    }, { passive: true });
 
     document.addEventListener('mouseout', function(e) {
         if (e.target.closest('a, button, .tool-item, .project-item, .menu-btn')) {
@@ -48,5 +48,5 @@ function initCustomCursor() {
             cursorFollower.style.width = '40px';
             cursorFollower.style.height = '40px';
         }
-    });
+    }, { passive: true });
 }
