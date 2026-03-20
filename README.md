@@ -45,11 +45,6 @@ Portfolio personnel moderne et interactif, concu avec un design sombre et des an
 | **Creations** | Galerie avec lightbox, navigation clavier et compteur |
 | **Contact** | Formulaire avec envoi PHP + coordonnees et reseaux sociaux |
 
-### Chatbot FAQ
-- Base de connaissances extensive (~50KB)
-- Reponses par correspondance de mots-cles
-- Couvre : identite, competences, projets, certifications, disponibilite, tarifs
-
 ---
 
 ## Stack Technique
@@ -88,7 +83,7 @@ Portfolio_Clayton_2026_3D/
 │   ├── index.html              # Page principale
 │   └── mentionslegales.html    # Mentions legales
 │
-├── CSS/                        # Styles modulaires (19 fichiers)
+├── CSS/                        # Styles modulaires
 │   ├── base.css                # Variables, reset, tokens
 │   ├── hero.css                # Section hero
 │   ├── about.css               # Section a propos
@@ -97,18 +92,16 @@ Portfolio_Clayton_2026_3D/
 │   ├── certifications.css      # Carrousel certifications
 │   ├── timeline.css            # Parcours (timeline)
 │   ├── veille.css              # Veille informatique
-│   ├── chatbot.css             # Chatbot FAQ
 │   ├── gallery.css             # Galerie lightbox
 │   ├── responsive.css          # Breakpoints & mobile
 │   └── ...                     # Autres composants
 │
-├── JS/                         # Scripts modulaires (16 fichiers)
+├── JS/                         # Scripts modulaires
 │   ├── main.js                 # Point d'entree, initialisation
 │   ├── spline-hero.js          # Robot 3D Spline
 │   ├── cursor.js               # Curseur personnalise
 │   ├── animations.js           # Animations hero
 │   ├── project-modal.js        # Modales projets
-│   ├── chatbot.js              # Chatbot FAQ
 │   └── ...                     # Autres modules
 │
 └── IMAGES/                     # Assets optimises
