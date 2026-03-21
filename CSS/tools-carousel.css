@@ -1,7 +1,8 @@
 /* tools-carousel.css */
 .tools-carousel-container {
     width: 100%;
-    overflow: clip visible;
+    overflow-x: clip;
+    overflow-y: visible;
     position: relative;
     padding-bottom: 50px;
 }
