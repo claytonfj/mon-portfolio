@@ -75,6 +75,16 @@ function initProjectModal() {
             showNotHostedMessage: true
         },
         'projet6': {
+            title: 'Sigeansud',
+            category: 'Application Web & Mobile',
+            date: '2026',
+            description: 'Application de gestion des repas des animaux pour la Réserve Africaine de Sigean (SIGEANSUD). Le système repose sur une architecture 3-tiers avec une API REST centrale, un back-office web pour les gestionnaires (gestion des soignants, affectations par espèces et menus recommandés) et une application mobile Android pour les soignants (saisie des heures et quantités des repas donnés aux animaux).<br><br><em>Projet réalisé en équipe de 4 dans le cadre du BTS SIO SLAM (AP4 2026).</em>',
+            image: IMG + 'screenSIGEANSUD.png',
+            techStack: ['php', 'sql', 'html', 'css', 'js'],
+            liveLink: '#',
+            showNotHostedMessage: true
+        },
+        'projet7': {
             title: 'Puy du Fou',
             category: 'Application Web Mobile',
             date: '2025',
@@ -84,7 +94,7 @@ function initProjectModal() {
             liveLink: 'https://puydufou.ewenevin.fr',
             showNotHostedMessage: true
         },
-        'projet7': {
+        'projet8': {
             title: 'MedocLab',
             category: 'Infrastructure Réseau',
             date: '2024',
@@ -94,7 +104,7 @@ function initProjectModal() {
             liveLink: '#',
             showNotHostedMessage: true
         },
-        'projet8': {
+        'projet9': {
             title: 'Site de gestion des déchêts',
             category: 'Application Web',
             date: '2024',
@@ -104,7 +114,7 @@ function initProjectModal() {
             liveLink: '#',
             showNotHostedMessage: true
         },
-        'projet9': {
+        'projet10': {
             title: 'Site de restauration à domicile',
             category: 'Développement Fullstack',
             date: '2025',
