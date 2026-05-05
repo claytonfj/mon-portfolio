@@ -101,8 +101,10 @@ function initProjectModal() {
             description: 'Projet d\'infrastructure réseau complet pour l\'entreprise fictive MedocLab, incluant la mise en place d\'un serveur Windows Server 2019 avec Active Directory, la gestion des utilisateurs, des stratégies de groupe (GPO), et la configuration des services réseau essentiels (DNS, DHCP, partages réseau, scripts PowerShell).',
             image: IMG + 'screenMEDOCLAB.png',
             techStack: [],
-            liveLink: '#',
-            showNotHostedMessage: true
+            liveLink: IMG + 'Document%20technique%20Medoclab.docx.pdf',
+            showNotHostedMessage: false,
+            buttonText: 'Voir le document technique',
+            buttonIcon: 'fas fa-file-pdf'
         },
         'projet9': {
             title: 'Site de gestion des déchêts',
