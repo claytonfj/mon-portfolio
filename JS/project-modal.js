@@ -79,7 +79,7 @@ function initProjectModal() {
             category: 'Application Web & Mobile',
             date: '2026',
             description: 'Application de gestion des repas des animaux pour la Réserve Africaine de Sigean (SIGEANSUD). Le système repose sur une architecture 3-tiers avec une API REST centrale, un back-office web pour les gestionnaires (gestion des soignants, affectations par espèces et menus recommandés) et une application mobile Android pour les soignants (saisie des heures et quantités des repas donnés aux animaux).<br><br><em>Projet réalisé en équipe de 4 dans le cadre du BTS SIO SLAM (AP4 2026).</em>',
-            image: IMG + 'screenSIGEANSUD.png',
+            image: IMG + 'screensigeansud.png',
             techStack: ['php', 'sql', 'html', 'css', 'js'],
             liveLink: '#',
             showNotHostedMessage: true
